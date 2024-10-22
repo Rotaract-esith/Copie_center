@@ -1,0 +1,116 @@
+/* Styles généraux pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Couleur de fond gris clair */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 12px; /* Bordures arrondies */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Style du titre */
+h1 {
+    color: #2c2f31; /* Couleur du texte */
+    font-size: 24px;
+    margin-bottom: 20px; /* Espacement en bas */
+    text-align: center; /* Centrer le texte */
+}
+
+/* Style du tableau */
+table {
+    width: 100%;
+    margin-top: 15px;
+     /* Supprime l'espacement entre les cellules */
+}
+
+/* Style des cellules du tableau */
+th, td {
+    padding: 12px; /* Plus de padding pour les cellules */
+    text-align: left;
+    border-bottom: 1px solid #dee2e6; /* Bordure inférieure douce */
+    transition: background-color 0.3s ease; /* Transition douce */
+}
+
+/* Style pour la ligne d'en-tête */
+th {
+    background-color: #007bff; /* Couleur de fond bleu */
+    color: #ffffff; /* Couleur du texte */
+    font-weight: bold; /* Mettre le texte en gras */
+}
+
+/* Style pour les lignes du tableau */
+tr:nth-child(even) {
+    background-color: #f8f9fa; /* Couleur très claire pour les lignes paires */
+}
+
+/* Style au survol des lignes */
+tr:hover {
+    background-color: #e9ecef; /* Couleur au survol */
+}
+
+/* Styles pour les boutons */
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff; /* Couleur du texte */
+    background-color: #007bff; /* Couleur de fond */
+    border: none;
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Supprime le soulignement */
+    text-align: center;
+    cursor: pointer; /* Curseur pointer pour le bouton */
+    margin-right: 10px; /* Espace entre les boutons */
+    transition: background-color 0.3s, transform 0.3s; /* Animation de la couleur et du mouvement au survol */
+    font-weight: bold; /* Mettre le texte en gras */
+}
+
+.custom-button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Styles pour le lien de téléchargement */
+.download-link {
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+.download-link .custom-button {
+    background-color: #28a745; /* Couleur de fond verte pour le téléchargement */
+}
+
+.download-link .custom-button:hover {
+    background-color: #218838; /* Couleur de fond au survol pour le téléchargement */
+}
+
+/* Style pour les paragraphes */
+p {
+    font-size: 12px;
+    color: #313233; /* Couleur légèrement plus foncée */
+    text-align: center; /* Centrer le texte des paragraphes */
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du bouton */
+    border: none;
+    border-radius: 5px;
+    background-color: #e2925d; /* Couleur du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le soulignement */
+    font-size: 16px; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Transition douce */
+}
+
+.button:hover {
+    background-color: #046bd8; /* Couleur plus foncée au survol */
+}

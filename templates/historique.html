@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static\IMGS\imprimante.png" type="image/png"> 
+    <link rel="stylesheet" href="static/CSS/historique .css" />
+    <title>Historique des Impressions</title>
+</head>
+<body>
+    <nav>
+        <!-- Votre code de navigation ici -->
+    </nav>
+    <div class="container">
+        <h1>Historique des Impressions pour {{ professeur_name }}</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Fichier</th>
+                    <th>Professeur</th>
+                    <th>Email</th>
+                    <th>Date et Heure</th>
+                    <th>Nombre de Copies</th>
+                    <th>Choix d'Impression</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% if historique %}
+                    {% for item in historique %}
+                        <tr>
+                            <td>{{ item.filename }}</td>
+                            <td>{{ item.professor }}</td>
+                            <td>{{ item.email }}</td>
+                            <td>{{ item.date_time }}</td>
+                            <td>{{ item.copies }}</td>
+                            <td>{{ item.color_choice }}</td>
+                            
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="7">Aucune donnée disponible</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('acceuil') }}" class="button">Retour</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/IMGS/imprimante.png" type="image/png"> 
+    <title>Historique des fichiers récupérés</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/historique_admin.css') }}" />
+</head>
+<body>
+    <nav>
+        <!-- Votre code de navigation ici -->
+    </nav>
+
+    <div class="container">
+        <h1>Historique d'impression</h1> 
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Rechercher par fichier ou professeur..." />
+            <input type="date" id="dateFilter" />
+            <button id="filterButton">Filtrer</button>
+        </div>
+        <table id="historiqueTable">
+            <thead>
+                <tr>
+                    <th>Fichier</th>
+                    <th>Professeur</th>
+                    <th>Email</th>
+                    <th>Date d'envoi</th>
+                    <th>Nombre de copies</th>
+                    <th>Choix d'impression</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for line in historique %}
+                    <tr>
+                        <td>{{ line[0] }}</td>
+                        <td>{{ line[1] }}</td>
+                        <td>{{ line[2] }}</td>
+                        <td>{{ line[3] }}</td>
+                        <td>{{ line[4] }}</td>
+                        <td>{{ line[5] }}</td>
+                        <td>{{ line[6] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button id="printButton" class="button">Imprimer l'historique</button>
+        <a href="{{ url_for('acceuil_admin') }}" class="button">Retour</a>
+    </div>
+
+    <script src="static/JS/historique.js"></script>
+</body>
+</html>

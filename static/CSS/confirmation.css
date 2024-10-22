@@ -1,0 +1,85 @@
+/* Styles généraux pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* Couleur de fond douce */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 600px; /* Largeur maximale */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 30px; /* Padding interne */
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 12px; /* Bordures arrondies */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    text-align: center; /* Centrer le texte */
+    animation: fadeIn 0.5s ease-in; /* Animation d'entrée */
+}
+
+/* Animation d'entrée */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style du titre */
+h1 {
+    color: #28a745; /* Couleur du texte (vert pour le succès) */
+    font-size: 32px; /* Taille de la police */
+    margin-bottom: 15px; /* Espacement en bas */
+}
+
+/* Style des paragraphes */
+p {
+    color: #495057; /* Couleur du texte */
+    font-size: 16px; /* Taille de la police */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+/* Style du lien dans le texte */
+p a {
+    color: #007bff; /* Couleur bleue pour le lien */
+    text-decoration: none; /* Enlever le soulignement */
+    font-weight: bold; /* Mettre le texte en gras */
+}
+
+p a:hover {
+    text-decoration: underline; /* Souligner au survol */
+}
+
+/* Style pour l'icône de validation */
+.check-icon {
+    width: 80px; /* Largeur de l'icône */
+    margin: 20px 0; /* Marges au-dessus et au-dessous */
+}
+
+/* Style pour le bouton de retour */
+.button {
+    display: inline-block; /* Afficher le bouton comme un bloc en ligne */
+    padding: 12px 20px; /* Padding interne */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    font-size: 16px; /* Taille de la police */
+    text-decoration: none; /* Enlever le soulignement */
+    transition: background-color 0.3s ease, transform 0.2s; /* Transition douce */
+    margin-top: 15px; /* Marges au-dessus */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+    transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+.button:active {
+    transform: translateY(1px); /* Enfoncement au clic */
+}

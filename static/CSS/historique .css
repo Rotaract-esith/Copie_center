@@ -1,0 +1,105 @@
+/* Styles généraux pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Couleur de fond gris clair */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.container {
+    margin: 20px auto;
+    max-width: 1800px; /* Limiter la largeur */
+    padding: 20px;
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 12px; /* Bordures arrondies */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Style du titre */
+h1 {
+    color: #2c2f31; /* Couleur du texte */
+     /* Taille du texte */
+    margin-bottom: 20px; /* Espacement en bas */
+    font-weight: bolder;
+     /* Centrer le texte */
+}
+nav {
+    background-color: #343a40;
+    padding: 1rem;
+    color: white;
+}
+/* Style du tableau */
+table {
+    width: 100%;
+     /* Pour des bordures propres */
+    margin-top: 15px;
+    border-radius: 8px; /* Bordures arrondies */
+    overflow: hidden; /* Évite les débordements */
+    border: none; /* Supprime la bordure de la table */
+}
+
+/* Style des cellules du tableau */
+th, td {
+    padding: 12px; /* Plus de padding pour les cellules */
+    text-align: left;
+    border: none; /* Supprime la bordure des cellules */
+    transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
+}
+
+/* Style pour la ligne d'en-tête */
+th {
+    background-color: #007bff; /* Bleu ciel */
+    color: #ffffff; /* Couleur du texte */
+    font-weight: bold; /* Mettre le texte en gras */
+}
+
+/* Style pour les lignes du tableau */
+tr:nth-child(even) {
+    background-color: #f8f9fa; /* Couleur très claire pour les lignes paires */
+}
+
+/* Style au survol des lignes */
+tr:hover {
+    background-color: #d1e7dd; /* Couleur douce au survol */
+}
+
+/* Styles pour les actions dans la colonne Actions */
+.action-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px; /* Espacement entre les boutons */
+    border: none; /* Supprime la bordure des boutons d'action */
+    border-radius: 5px;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le soulignement */
+    font-size: 14px; /* Taille de la police */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition douce */
+}
+
+.action-button:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+}
+
+/* Style pour les boutons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du bouton */
+    border: none; /* Supprime la bordure du bouton */
+    border-radius: 5px;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le soulignement */
+    font-size: 16px; /* Taille de la police */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition douce */
+}
+
+.button:hover {
+    background-color: #046bd8; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+}

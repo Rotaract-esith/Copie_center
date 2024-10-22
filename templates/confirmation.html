@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static\IMGS\imprimante.png" type="image/png"> 
+    <title>Confirmation </title>
+    <link rel="stylesheet" href="static\CSS\confirmation.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Merci, {{ professeur_name }} !</h1>
+        <img src="static\IMGS\verifier.png" alt="Validé" class="check-icon"> <!-- Remplacez check-icon.png par le chemin de votre icône -->
+        <p>Votre fichier "{{ file_name }}" a bien été soumis pour impression.</p>
+        <p>verifier votre mail "{{ session['professeur_email'] }}" pour valider l impression <a href="https://www.google.com/intl/fr/gmail/about/">gmail</a>.</p>
+        <a href="{{ url_for('acceuil') }}" class="button">Retour à la page d'accueil</a>
+    </div>
+</body>
+</html>
+

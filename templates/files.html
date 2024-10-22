@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static\IMGS\imprimante.png" type="image/png"> 
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/files.css') }}" />
+    <title>Liste des fichiers</title>
+</head>
+<body>
+    <div class="container"> <!-- Ajout du conteneur -->
+        <h1>Liste des fichiers</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom du fichier</th>
+                    <th>Professeur</th>
+                    <th>Email</th>
+                    <th>Date d'envoi</th>
+                    <th>Nombre de copies</th>
+                    <th>Choix d'impression</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in files %}
+                    <tr>
+                        <td>{{ file.name }}</td>
+                        <td>{{ file.professor }}</td>
+                        <td>{{ file.email }}</td>
+                        <td>{{ file.date_sent }}</td>
+                        <td>{{ file.copies }}</td>
+                        <td>{{ file.print_choice }}</td>
+                        <td>{{ file.status }}</td>
+                        <td>
+                            <a href="{{ url_for('download_file', filename=file.name) }}" class="download-link">
+                                <button class="custom-button">Télécharger</button>
+                            </a>
+                            <form action="{{ url_for('notify_ready', filename=file.name) }}" method="post" style="display:inline;">
+                                <button type="submit" class="custom-button">Imprimés</button>
+                            </form>
+                            
+                            <form action="{{ url_for('recuperer', filename=file.name) }}" method="post" style="display:inline;">
+                                <button type="submit" class="custom-button">Recuperé</button>
+                            </form>
+                            
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('acceuil_admin') }}" class="button">Retour </a>
+    </div> <!-- Fin du conteneur -->
+</body>
+</html>

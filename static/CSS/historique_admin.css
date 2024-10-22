@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    background-color: #343a40;
+    padding: 1rem;
+    color: white;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.search-filter input, .search-filter input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    width: 46%; /* Ajuster la largeur selon vos besoins */
+}
+#filterButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #ffffff; /* Couleur du texte */
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+    transition: background-color 0.3s ease; /* Transition douce */
+}
+
+#filterButton:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+}
+h1 {
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 15px;
+}
+.container button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5e00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    font-size: 15px;
+}
+    
+
+.button:hover {
+    background-color: #0056b3;
+}
+@media print {
+    /* Masquer tout par défaut */
+    body * {
+        visibility: hidden; /* Masquer tout par défaut */
+    }
+
+    /* Afficher le logo et le titre */
+    .header, .header * {
+        visibility: visible; /* Afficher l'en-tête */
+    }
+
+    /* Afficher le tableau et ses éléments */
+    table, table * {
+        visibility: visible; /* Afficher le tableau */
+    }
+
+    /* Style du logo */
+    
+    }
+    h1 {
+        visibility: visible;
+        text-align: left;
+    }
+
+    /* Styles du tableau */
+    table {
+        width: 100%; /* Rendre le tableau responsive */
+        @media print {
+    /* Masquer tout par défaut */
+    body * {
+        visibility: hidden; /* Masquer tout par défaut */
+    }
+
+    /* Afficher le logo et le titre */
+    .header, .header * {
+        visibility: visible; /* Afficher l'en-tête */
+    }
+
+    /* Afficher le tableau et ses éléments */
+    table, table * {
+        visibility: visible; /* Afficher le tableau */
+    }
+
+    /* Style du logo */
+    .logo {
+        display: block; /* Faire en sorte que le logo s'affiche sur une nouvelle ligne */
+        margin: 0 auto; /* Centrer le logo */
+        width: 100px; /* Ajuster la taille du logo */
+        height: auto; /* Garder les proportions */
+    }
+
+    /* Styles du tableau */
+    table {
+        width: 100%; /* Rendre le tableau responsive */
+        border-collapse: collapse; /* Supprimer les espaces entre les cellules */
+        margin: 20px auto; /* Centrer le tableau et ajouter un espacement */
+        font-size: 12px; /* Ajuster la taille de la police pour l'impression */
+    }
+
+    /* Styles pour les en-têtes de colonne */
+    th {
+        background-color: #007bff; /* Couleur d'arrière-plan des en-têtes */
+        color: #ffffff; /* Couleur du texte des en-têtes */
+        padding: 10px; /* Espacement intérieur */
+        text-align: left; /* Alignement à gauche */
+        border: 1px solid #dee2e6; /* Bordure */
+    }
+
+    /* Styles pour les cellules */
+    td {
+        padding: 8px; /* Espacement intérieur */
+        border: 1px solid #dee2e6; /* Bordure */
+    }
+
+    /* Styles pour les lignes paires */
+    tr:nth-child(even) {
+        background-color: #f8f9fa; /* Couleur de fond des lignes paires */
+    }
+
+    /* Réduire la marge des pages pour éviter le rognage */
+    @page {
+        margin: 10mm; /* Marge pour la page d'impression */
+    }
+}
+ /* Supprimer les espaces entre les cellules */
+        margin: 20px auto; /* Centrer le tableau et ajouter un espacement */
+        font-size: 12px; /* Ajuster la taille de la police pour l'impression */
+    }
+
+    /* Styles pour les en-têtes de colonne */
+    th {
+        background-color: #007bff; /* Couleur d'arrière-plan des en-têtes */
+        color: #ffffff; /* Couleur du texte des en-têtes */
+        padding: 10px; /* Espacement intérieur */
+        text-align: left; /* Alignement à gauche */
+        border: 1px solid #dee2e6; /* Bordure */
+    }
+
+    /* Styles pour les cellules */
+    td {
+        padding: 8px; /* Espacement intérieur */
+        border: 1px solid #dee2e6; /* Bordure */
+    }
+
+    /* Styles pour les lignes paires */
+    tr:nth-child(even) {
+        background-color: #f8f9fa; /* Couleur de fond des lignes paires */
+    }
+
+    /* Réduire la marge des pages pour éviter le rognage */
+    @page {
+        margin: 10mm; /* Marge pour la page d'impression */
+    }
+}
+

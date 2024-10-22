@@ -1,0 +1,151 @@
+/* Styles généraux pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* Couleur de fond douce */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1500px; /* Largeur maximale */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 30px; /* Padding interne */
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 12px; /* Bordures arrondies */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    animation: fadeIn 0.5s ease-in; /* Animation d'entrée */
+}
+
+/* Animation d'entrée */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style du titre */
+h1 {
+    color: #343a40; /* Couleur du texte */
+    font-size: 28px; /* Taille de la police */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 15px; /* Espacement en bas */
+}
+
+/* Style des paragraphes */
+p {
+    color: #495057; /* Couleur du texte */
+    font-size: 16px; /* Taille de la police */
+    margin-bottom: 20px; /* Espacement en bas */
+    text-align: center; /* Centrer le texte */
+}
+
+/* Styles pour le formulaire */
+form {
+    display: flex;
+    flex-direction: column; /* Aligner les éléments en colonne */
+}
+
+/* Styles pour les labels */
+label {
+    margin-bottom: 8px; /* Espacement en bas */
+    font-weight: bold; /* Mettre le texte en gras */
+    color: #343a40; /* Couleur du texte */
+}
+
+/* Styles pour les entrées de formulaire */
+input[type="file"],
+input[type="number"],
+select,
+textarea {
+    padding: 12px; /* Padding interne */
+    border: 1px solid #ced4da; /* Bordure grise */
+    border-radius: 5px; /* Bordures arrondies */
+    margin-bottom: 20px; /* Espacement en bas */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
+}
+
+/* Styles au survol des entrées */
+input[type="file"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* Bordure bleue au focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre douce au focus */
+    outline: none; /* Enlever le contour par défaut */
+}
+
+/* Style du bouton d'envoi */
+button {
+    padding: 12px 15px; /* Padding interne */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur en main */
+    transition: background-color 0.3s ease, transform 0.2s; /* Transition douce */
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+    transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+button:active {
+    transform: translateY(1px); /* Enfoncement au clic */
+}
+
+/* Style pour le message de statut */
+#statusMessage {
+    margin-top: 20px; /* Espacement en haut */
+    text-align: center; /* Centrer le texte */
+    color: #28a745; /* Couleur verte pour les messages de succès */
+    font-size: 16px; /* Taille de la police */
+}
+
+/* Icônes d'indication de fichier */
+input[type="file"]::before {
+    content: '📁'; /* Utilisation d'une icône emoji pour le fichier */
+    font-size: 24px; /* Taille de l'icône */
+    margin-right: 8px; /* Espacement à droite */
+    vertical-align: middle; /* Alignement vertical */
+}
+
+/* Style pour les icônes d'état de chargement */
+input[type="file"].loading::before {
+    content: '⏳'; /* Icône d'état de chargement */
+    animation: spin 1s infinite; /* Animation de rotation */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style pour les boutons (si vous avez des boutons) */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+
+    border-radius: 5px;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #ffffff; /* Couleur du texte du bouton */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le soulignement */
+    font-size: 16px; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Transition douce */
+}
+
+.button:hover {
+    background-color: #046bd8; /* Couleur plus foncée au survol */
+}

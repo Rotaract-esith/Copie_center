@@ -1,0 +1,159 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('arr2.jpg') no-repeat center center; /* Centrer l'image */
+    background-size: cover; /* Couvrir l'arrière-plan */
+    position: relative;  /* Couleur de fond douce */
+}
+body h1{ 
+    margin-top: -35%;
+    font-size: 25px;
+
+}    
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #ffffff; /* Couleur de fond du nav */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour le nav */
+    z-index: 1000; /* Assurer que le nav reste au-dessus des autres éléments */
+    transition: background 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+nav.scrolled {
+    background: rgba(255, 255, 255, 0.9); /* Légère transparence lorsque l'utilisateur fait défiler la page */
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+}
+
+.logo .menu-icon {
+    color: #333;
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+    transition: color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.logo .menu-icon:hover {
+    color: #0160b9; /* Changement de couleur au survol */
+}
+
+.logo .logo-name {
+    color: #033101;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+/* Styles pour le logo centré */
+nav .logo-center {
+    position: absolute;
+    left: 50%; /* Positionner au centre horizontalement */
+    transform: translateX(-50%); /* Ajuster pour centrer l'image */
+}
+
+.logo-img {
+    height: 60px; /* Ajustez la hauteur selon vos besoins */
+}
+
+nav .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 260px;
+    padding: 20px 0;
+    background-color: #ffffff; /* Fond blanc pour le sidebar */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre pour le sidebar */
+    transition: all 0.4s ease;
+    z-index: 999; /* Assurer que le sidebar reste au-dessus des autres éléments */
+}
+
+nav.open .sidebar {
+    left: 0; /* Ouvrir le sidebar */
+}
+
+.sidebar .sidebar-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+}
+
+.sidebar-content .list {
+    list-style: none;
+}
+
+.list .nav-link {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    padding: 14px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transition douce pour le survol */
+}
+
+.lists .nav-link:hover {
+    background-color: #4070f4; /* Couleur de fond au survol */
+}
+
+.nav-link .icon {
+    margin-right: 14px;
+    font-size: 20px;
+    color: #707070;
+    transition: color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.nav-link .link {
+    font-size: 16px;
+    color: #707070;
+    font-weight: 400;
+    transition: color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+    color: #fff; /* Changement de couleur au survol */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    background: rgba(0, 0, 0, 0.3); /* Couleur d'overlay */
+    z-index: 998; /* Assurer que l'overlay reste au-dessus des autres éléments */
+}
+
+nav.open ~ .overlay {
+    opacity: 1;
+    left: 0; /* Ouvrir l'overlay */
+    pointer-events: auto;
+}

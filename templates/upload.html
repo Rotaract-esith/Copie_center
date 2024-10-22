@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static\IMGS\imprimante.png" type="image/png"> 
+    <title>Soumission de fichier à imprimer</title>
+    <link rel="stylesheet" href="static/CSS/styles.css"> <!-- Lien vers ton fichier CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Bonjour, {{ professeur_name }} !</h1>
+        <p>Veuillez soumettre votre fichier pour impression.</p>
+        <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="file">Choisissez un fichier :</label>
+            <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.jpg,.png" required>
+            
+            <label for="copies">Nombre de copies :</label>
+            <input type="number" id="copies" name="copies" min="1" value="1" required>
+
+            <label for="colorChoice">Choix d'impression :</label>
+            <select id="colorChoice" name="colorChoice" required>
+                <option value="color">Couleur</option>
+                <option value="blackAndWhite">Noir et blanc</option>
+            </select>
+
+            <label for="comments">Commentaires (facultatif) :</label>
+            <textarea id="comments" name="comments" placeholder="Ajouter un commentaire..."></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="statusMessage"></p> <!-- Pour afficher un message après la soumission -->
+        <a href="{{ url_for('acceuil') }}" class="button">Retour à la page d'accueil</a>
+    </div>
+
+    <script src="static/JS/script.js"></script> <!-- Lien vers ton fichier JavaScript -->
+</body>
+</html>

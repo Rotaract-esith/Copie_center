@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="static\IMGS\imprimante.png" type="image/png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Espace professeur |Copie center</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="static\CSS\acceuil.css" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Bonjour , {{ professeur_name }} !</h1> 
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+        <span class="logo-name">Esith Copie Center</span>
+      </div>
+      <div class="logo-center">
+        <img src="static/IMGS/esith.png" alt="Logo" class="logo-img" /> <!-- Remplacez par le chemin correct -->
+      </div>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <span class="logo-name">Esith</span>
+        </div>
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="{{ url_for('acceuil') }}" class="nav-link">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="link">ACCEUIL</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="{{ url_for('upload_page') }}" class="nav-link">
+                  <i class="bx bx-upload icon"></i>
+                  <span class="link">ENVOYER DES FICHIERS</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="{{ url_for('historique') }}" class="nav-link">
+                  <i class="bx bx-upload icon"></i>
+                  <span class="link">LES FICHIERS EN ATTENTE</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="{{ url_for('logout') }}" class="nav-link">
+                  <i class="bx bx-log-out icon"></i>
+                  <span class="link">Déconnexion</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+
+    <script src="static\JS\acceuil.js"></script>
+  </body>
+</html>
